@@ -1,0 +1,883 @@
+#CSS
+/* Class selector */
+.red{
+    background-color: red;
+}
+
+/* Id selector */
+#green{
+    background-color: green;
+}
+
+/* Child selector */
+.red>p{
+    background-color: blue;
+}
+
+/* Decendant Selector */
+.red p{
+    background-color: blue;
+}
+
+/* For all screen contents */
+/* *{
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0;
+    margin: 0;
+} */
+
+/* selector-visited site */
+a:visited{
+    color: red;
+}
+
+/* Not visited site */
+a:link{
+    color: green;
+}
+
+a:active{
+    background-color: black;
+}
+/* OVER THE TEXT/BUTTON */
+a:hover{
+    background-color: coral;
+}
+/* for first paragraph in multiple
+p:first-child{
+    background-color: aqua;
+}*/
+
+.box{
+    background-color: red;
+    padding: 10px;
+    margin: 15px;
+    border: 2px solid blue;
+    height: 100px;
+    box-sizing: border-box;
+}
+p{
+    /* font-family: Arial, Helvetica, sans-serif;
+    font-style:oblique; */
+    text-indent: 30px; /*ADDING SPACE BEFORE TEXT*/
+    
+}
+/*ALL FONT RELATED*/
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    font-weight: 5000;
+    text-decoration: underline;
+    color: brown;
+    line-height: 5;
+    letter-spacing: 10px;
+    text-transform:uppercase;
+    text-decoration-color: black;
+    text-decoration-style: dotted;
+    text-indent: 30px;
+    text-align: center;
+}
+h1:hover{
+    color: blue;
+}
+div{
+    /* background-color: blue; */
+    color: black;
+}
+div p:first-child /*FOR FIRST PARA IN DIV*/
+{
+    background-color: yellow;
+    color: red;
+}
+.A{
+    color: blue;
+}
+.B{
+    color: brown !important;/*IMPORTANT COLOR APPLYING*/
+}
+.C{
+    color: aqua
+}
+
+
+##HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratik</title>
+    <style>
+        p{
+            background-color: yellow;
+            color: red;
+        }
+        .box1{
+            border: 2px solid brown;
+            width: 750px;
+            background-color: aqua;
+            box-sizing: border-box;
+            margin: auto;
+        }
+        .container{
+            border: 2px solid brown;
+            width: 750px;
+            background-color: aqua;
+            box-sizing: border-box;
+            margin: 23px auto;
+            height: 80vh;
+            font-size: 26px;
+        }
+        .container p{
+            font-size: 3m;/*multioply m*/
+            width: 50%;
+        }
+        html{
+            font-size: 30px;
+        }
+        .b1{
+            display: inline-block;
+            padding: 45px;
+            margin: 45px;
+            border: 2px solid blueviolet;
+            display: flex;
+            box-shadow: 3px 3px 3px red;
+            box-shadow:inset 3px 3px 3px green;
+
+        }
+        .tsh
+        {
+            text-shadow:2px 2px 2px yellow;
+            outline: 2px solid green;
+            outline-offset: 30px;
+            border-radius: 40px;
+        }
+        /* .b2{ */
+            /* display: none; */
+            /* visibility: hidden; */
+        /* } */
+        nav ul{
+            list-style:devanagari;
+            list-style-type:"❤️";
+            list-style: none;
+            display: flex;
+            /* background-color: yellow; */
+            /* list-style-position:inside; */
+            /* border: 2px solid black; */
+            color: red;
+            /* list-style-image:Pratik.img; */
+        }
+        nav ul li
+        {
+            padding: 40px;
+        }
+        .scroll
+        {
+            width: 200px;
+            height: 200px;
+            border: 3px solid gold;
+            /* overflow: scroll; */
+            overflow: auto;
+            /* white-space: nowrap; */
+            text-overflow: ellipsis;
+            /* overflow-x: scroll;
+            overflow-y: hidden; */
+            overflow: scroll scroll;
+        }
+    </style> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Pratik</h2>
+    <!-- <h1 style="background-color: yellow; color: red;">About me!!!</h1> -->
+    <div class="red">
+        <o>
+            <li>Inline CSS</li>
+            <li>Internal CSS</li>
+            <li>External CSS</li>
+        </o>
+        <article>
+        <p>Pragraph inside Div</p>
+    </article>
+    </div>
+    <p id="green">Information Technology</p><br><br>
+    <a href="http://google.com" target="_blank">Google</a>
+    <a href="http://facebook.com" target="_blank">Facebook</a><br><br>
+    <div class="box">I am box</div>
+    <br><br><h1>Font family!!!!</h1><br><br><br>
+    <div>
+        <p>Hi</p>
+        <p>Hello</p>
+        <p>how</p>
+        <p>are</p>
+        <p>you</p>
+    </div>
+
+
+    <BR>
+        <div class="A B C">
+            <h4>Specitity css</h3>
+        </div>
+        <br><br>
+
+
+        <div class="box1">
+                This is a box
+        </div>
+
+        <div class="container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, impedit recusandae ratione ipsa ullam cum repudiandae ut explicabo voluptatem magni aspernatur illum aut velit facilis quod, eveniet rerum ab iusto.</p>
+        </div><br>
+
+
+        <!-- DISPLAY PROPERTY -->
+        <span>Pratik</span>
+        <span>Bavche</span><br>
+        <div class="b1 b2">DYP</div>
+        <div class="b1">COE</div>
+
+        <br><br>
+        <div class="tsh">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo veniam dolores, repellat ipsum quam dolorem laborum voluptatibus quod? Commodi iste similique labore quod.
+        </div>
+        <br><br>
+        <nav>
+            <ul>
+                <li>HOME</li>
+                <li>ABOUT</li>
+                <li>CONTACT</li>
+            </ul>
+        </nav>
+        <div class="scroll">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita corrupti pariatur optio placeat rerum quis iure velit fugit minus? Consectetur, quia expedita sint autem exercitationem perferendis doloremque perspiciatis, enim, modi error ipsam quo. Ratione, atque?</div>
+</body>
+</html>
+
+
+######################################################################
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box{
+            border: 2px solid black;
+            height: 233px;
+            width: 80vw;
+            padding: 30px;
+            margin: 5px;
+        }
+        .box1{
+            background-color: teal;
+            /* position: sticky; */
+            top: 0px;
+            height: 111px;
+            width: 80%;
+            margin: 0;
+            /* position:absolute;
+            left: 30px;
+            top: 0px;
+            left: 0; */
+        }
+        .box2{
+            background-color: green;
+            /* z-index: 1;
+            top: 80px;
+            position: relative; */
+        }
+        .box3{
+            background-color: aquamarine;
+            /* position: relative;
+            top: 100px; */
+            /* position: fixed; */
+        }
+        .parent{
+            margin: 30px;
+            padding: 32px;
+            border: 3px solid red;
+            /* position: absolute; */
+            /* transform: translate(0); */
+            /* filter: invert(0); */
+            perspective: 0cm;
+        }
+        .card{
+            border: 1px solid black;
+            border-radius: 23px;
+            position: relative;
+            width: 210px;
+            height: 400px;
+        }
+        .card img
+        {
+            border-radius: 20px;
+            /* display: flex; */
+            position: relative;
+            padding: 5px;
+        }
+        h4
+        {
+            border: 1px solid black;
+            border-radius: 6px;
+            padding: 4px;
+             margin-left: 18px;
+             font-size: 15px;
+             font-family: 'Courier New', Courier, monospace;
+             display: inline;
+        }
+        .btn{
+            padding: 0 10px;
+        }
+        h2
+        {
+            font-size: 18px;
+            margin-top: 15px;
+            margin-left: 10px;
+        }
+        h5{
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        button{
+            margin: 20px 50px;
+            background-color: blueviolet;
+            color: white;
+            /* border: 2px solid black; */
+            border-radius: 10px;
+            font-size: 18px;
+            padding: 5px 8px;
+            border: none;
+            cursor: pointer;
+        }
+        /* GLOBAL VARIABLE */
+        :root{
+            --color: brown;
+            --seccolor:yellow;
+        }
+        .nav
+        {
+            background-color: var(--color);
+            list-style-position: inside;
+        }
+        .con{
+            background-color: var(--seccolor);
+        }
+        ul li{
+            list-style: none;
+            padding: 10px;
+        }
+        ul{
+            display: flex;
+        }
+        ul li:first-child{
+         --color:orange;  /*Local Variable */
+            background-color: var(--color,red);
+            border: 3px solid var(--seccolor);
+        }
+    @media screen and (orientation:portrait){
+            .con{
+                border: 4px solid black;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="parent">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="card">
+        <img src="Pratik Bavche.jpg" height="200px" width="200px" alt="My Image">
+        <div class="d"></div>
+        <div class="btn">
+            <h4>Nature</h4>
+            <h4>Lake</h4>
+        </div>
+        
+        <h2>PRATIK BAVCHE</h2>
+        <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta deserunt, tenetur molestiae praesentium blanditiis deleniti.</h5>
+        <button>Read more</button>
+    </div><br>
+
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Home</li>
+        </ul>
+    </div><br>
+    <div class="con">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, incidunt! Nobis distinctio voluptate voluptatibus culpa repudiandae, voluptates nemo explicabo. Dolorem laborum reprehenderit blanditiis autem unde, omnis modi nobis error consectetur! Tempora harum impedit ipsum laudantium aspernatur, atque commodi quo provident, quod veritatis eveniet corrupti quibusdam!
+    </div><br><br><br>
+    <div>
+        I am red body
+    </div>
+</div>
+</body>
+</html>
+
+
+#################################################################
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            float: left;
+        }
+        .card{
+            /* border: 2px solid black; */
+            display: flow-root;
+        }
+        .crd{
+            border: 2px solid red;
+        }
+        .crd:nth-child(3)
+        {
+            clear: both;
+        }
+        /* .box:first-child{
+            background-color: red;
+            color: aliceblue;
+        }
+        .box:first-line{
+            color:black;
+        }
+        .boxes *{
+            background-color: cadetblue;
+            border: 2px solid black;
+        } */
+         .box:nth-child(even)
+         {
+            
+            background-color: red;
+         }
+         .box:nth-last-child(1)
+         {
+            background-color: black;
+         }
+
+
+
+         .boxes:before{
+            content: "Pratik bavche patil";
+            color: burlywood;
+         } .boxes:after{
+            content: "Pratik bavche patil last";
+            background-color: bisque;
+         }
+
+        ::selection
+         {
+            color: red;
+         }
+         .box::first-letter{
+            color: orchid;
+            font-size: 50px;
+         }
+         input::placeholder
+         {
+            color: red;
+            font-size: large;
+         }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="Pratik Bavche.jpg" alt="" width="230px" srcset="">
+        <div class="crd">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum facere tempore natus totam, facilis officiis doloremque dolor ratione reiciendis dolore. Placeat, magni dolorem culpa consectetur reprehenderit quo. Quo, nulla magnam!</div>
+        <div class="crd">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis officiis ducimus, dicta distinctio praesentium repellat iste eveniet et amet </div>
+        <div class="crd">Card 3</div>
+        <br><br><br>
+        <div class="boxes">
+            <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque explicabo iusto voluptas officia et totam repudiandae quae unde beatae, cupiditate nam distinctio quisquam laboriosam dolorum labore similique ipsa repellendus libero Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quam doloremque libero harum, repellat quo odit fugit voluptatum rem sit fuga minus ex magnam, possimus laborum aperiam sequi dolore alias..</div>
+            <div class="box">box2</div>
+            <div class="box">box3</div>
+            <input type="text" placeholder="enter here">
+        </div>
+    </div>
+</body>
+</html>
+
+$$$$$$$$$$$$$$$$$$$$$$$$
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exersize 5</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            padding: 10px 30px;
+            background-color:rgb(255, 12, 251);
+        }
+        ul li
+        {
+            display: inline;
+            padding: 10px;
+            cursor: pointer;
+        }
+        li:hover{
+            color:red;
+        }
+        body{
+            background-color: green;
+        }
+        .content{
+            border: 2px solid black;
+            margin: 15px 00px 33px 41px;
+            padding: 70px;
+            float: left;
+            background-color: chocolate;
+        }
+        .content1{
+            border: 2px solid black;
+           margin-top: 17px;
+           margin-left: 255px;
+           margin-right: 470px;
+            padding: 68px;
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>MESSAGE</li>
+            <li>HELP</li>
+            <li>CONTACT</li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1></h1>
+    </div>
+    <div class="content1">
+        <h1></h1>
+    </div>
+</body>
+</html>
+
+*****************************FLEXXXXXXXXXXXXXXXXXXXXXX*********************
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+		
+		
+		
+            border: 2px solid orange;
+            display: flex;
+            height: 80vh;
+            align-content: center;
+            justify-content: center; 
+            /* align-items: center; */
+            flex-direction: column;
+        /* flex-direction: row; */
+        /* flex-direction: column-reverse; */
+        flex-wrap: wrap;
+        flex-flow: row;
+        gap: 20px 40px;
+        /* row-gap: 20px;
+        column-gap: 40px; */
+        }
+		
+		
+		
+        .item{
+            height: 70px;
+            width: 90px;
+            border: 3px solid black;
+            /* margin: 4px; */
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </main>
+</body>
+</html>
+
+
+#####################
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            display: grid;
+            grid-template-columns: 120px 100px;
+            grid-template-rows: 100px 100px 100px;
+        }
+        .item{
+            border: 2px solid red;
+            height: 50px;
+            width: 30px;
+        }
+        .it1{
+            grid-row: 1/2;
+            grid-column: 1/2;
+        } 
+        .it3{
+            grid-row: 1/2;
+            /* grid-row-start: 1;
+            grid-row-end: 1; */
+            grid-column: 1/2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item it1">1</div>
+        <div class="item">2</div>
+        <div class="item it3">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>
+
+
+############################################<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: right;
+            margin-top: 20px;
+            cursor: pointer;
+            margin-left: 25px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .nav ul{
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+        .item {
+            padding: 10px;
+        }
+
+        img {
+            margin-top: 9px;
+        }
+
+        .name {
+            margin-top: -38px;
+            font-size: 30px;
+            margin-left: 50px;
+        }
+
+        .name1 {
+            margin-left: 55px;
+            font-size: 10px;
+        }
+
+        .a {
+            display: flex;
+            margin-left: 16px;
+            margin-top: -50px;
+        }
+
+        .mai {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            /* font-style: italic; */
+            font-size: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .para {
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            margin-top: 20px;
+        }
+
+        .new {
+            display: flex;
+            justify-content: center;
+            font-size: 15px;
+        }
+
+        .btn{
+            display: flex;
+            justify-content: center;
+            color: aliceblue;
+            padding: 20px 30p;margin-top: 40px;
+
+        }
+        .grid{
+            display: flex;
+            justify-content: center;
+            color: aliceblue;
+            padding: 15px;
+            margin-top: 40px;
+            background-color: bisque;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+        }
+        .itmlang{
+            color: white;
+            padding-bottom: 20px;
+            text-align: center;
+            font-weight: 700;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .b1{
+            background-color: aquamarine;
+            color: red;
+            border-radius: 2px;
+            border-style: none;
+            padding: 4px;
+    
+        }
+        .itm{
+           padding: 23px;
+           background-color: gray;
+           border-radius: 12px; 
+        }
+        .con{
+            width: 300px;
+            height: 200px;
+            border: 3px solid black;
+            background-color: aquamarine;
+        }
+        img{
+            width: 300px;
+            height: 200px;
+            object-fit: fill;
+            filter: blur(10px);
+            /* object-position: bottom left; */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+           <ul>
+            <li>
+                Product
+            </li>
+            <li>
+                Pricing
+            </li>
+            <li>Resources</li>
+            <li>About</li>
+           </ul>
+            <img src="logo.jpg" height="20px" alt="">
+        </div>
+        <div class="a">
+            <img src="l2.jpg" height="45px" alt="">
+        </div>
+        <div class="logo">
+            <div class="name">UltraEdit</div>
+            <div class="name1">Pratik bavche patil</div>
+        </div>
+        <main>
+            <div class="mai">
+                <p>Download <b>UltraEdit</b> for windows</p>
+            </div>
+            <div class="para">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error obcaecatisapiente nesciunt, enim </p>
+            </div>
+            <div class="new">
+                <p>aspernatur ipsum fuga alias. Vel.</p>
+            </div>
+        </main>
+        <div class="btn">
+            <button
+                style="background-color: red; padding: 5px; border-radius: 4px; border: none; color: aliceblue;">Download
+                for windows</button>
+        </div>
+        <div class="grid">
+            <div class="itm">
+                <div class="itmlang">English</div>
+                <button class="b1 green"><b>Download 32 bit</b></button>
+                <button class="b1 blue"><b>Download 62 bit</b></button>
+            </div>
+            <div class="itm">
+                <div class="itmlang">English</div>
+                <button class="b1 green"><b>Download 32 bit</b></button>
+                <button class="b1 blue"><b>Download 62 bit</b></button>
+            </div>
+            <div class="itm">
+                <div class="itmlang">English</div>
+                <button class="b1 green"><b>Download 32 bit</b></button>
+                <button class="b1 blue"><b>Download 62 bit</b></button>
+            </div>
+            <div class="itm">
+                <div class="itmlang">English</div>
+                <button class="b1 green"><b>Download 32 bit</b></button>
+                <button class="b1 blue"><b>Download 62 bit</b></button>
+            </div>
+            <div class="itm">
+                <div class="itmlang">English</div>
+                <button class="b1 green"><b>Download 32 bit</b></button>
+                <button class="b1 blue"><b>Download 62 bit</b></button>
+            </div>
+            
+        </div>
+
+        <div class="con">
+            <img src="Pratik Bavche.jpg" alt="" srcset="">
+        </div>
+    </header>
+</body>
+
+</html>
+</html>

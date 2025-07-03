@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black;">
+    <div>
+        <ul id="Images" style="color: white;">
+                <li><h1 id="fname">Pratik</h1></li>
+                <li><h1 id="mname">Bavche</h1></li>
+                <li><h1 id="lname">Patil</h1></li>
+        </ul>
+    </div>
+</body>
+        <script>
+            // document.getElementById('fname').onclick=function(){
+            //     alert("Firstname is clicked!!")
+            // }
+            // document.getElementById('Images').addEventListener('click',function(e){
+            //       console.log("Another clicked");
+                  
+            // },false)
+            // document.getElementById('fname').addEventListener('click',function(e){
+            //     e.stopPropagation()  
+            //     console.log("Pratik");
+                  
+            // },false)
+            // document.getElementById('lname').addEventListener('click',function(e){
+            //     e.preventDefault();
+            //     e.stopPropagation();
+            //     console.log("Patill");
+            // })
+
+            document.querySelector('#Images').addEventListener('click',function(e){
+                // console.log(e.target.parentNode);
+                console.log(e.target.tagName);
+                if(e.target.tagName=="H1"){
+                    console.log(e.target.id);
+                    let del=e.target.parentNode
+                    // del.parentNode.removeChild(del)
+                    del.remove();
+                    
+                }
+            },false)
+        </script>
+
+</html>

@@ -1,0 +1,418 @@
+function
+
+function get(x)
+{
+    return x*x;
+}
+get(10);
+
+#####function expression
+let hello=function(x)
+{}
+
+#####ARROW function
+let abc=(x)=>{
+    return x;
+}
+
+#####OBJECT - collection of key value pair
+let obj={
+    name:"Pratik"
+    key value
+    get:function(){}
+}
+
+#####ARRAY
+In array actual data stored in heap memory and variable stored in stack
+SHALLOW Copy =
+create a copy of top level properties
+copy only reference of object,array
+
+DEEP Copy =
+it copy everything completly
+
+var arr=[
+    function(a,b)
+    {
+        return a+b;
+    },
+    function(a,b)
+    {
+        return a-b;
+    },
+    function(a,b)
+    {
+        return a*b;
+    }
+];
+
+let first=arr[0];
+console.log(first(10,20));
+
+let s=arr[1];
+console.log(s(20,20));
+
+let t=arr[2];
+console.log(t(10,20));
+
+########MAP
+map is a method that is used with array 
+we can perform the operation on individual element of an array 
+it create new array without changing original array
+
+array.map(function())
+
+
+let arr=[10,20,30,40,50]
+
+let sqr=arr.map(num=>num*num);
+
+
+
+let arr1=[
+    {name:"Pratik"},
+    {name:"KEsahv"}
+]
+
+let upr=arr1.map(function(num){
+    return num.name;
+})
+console.log(upr);
+
+#####FILTER
+map is a method that is used with array 
+it allow only the elements which pass/satisfy the condition
+
+array.filter(function()){}
+
+const numbers = [1, 2, 3, 4, 5, 6];
+let res=numbers.filter(num=>num%2==0)
+console.log(res);
+
+let arr1=[1,"Pratik",2,3,"5"];
+
+let rs=arr1.filter(function(data){
+    if(typeof(data)=='string'){
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+})
+
+console.log(rs);
+
+#####REDUCE function are mainly used to reduce all elements into a single value 
+
+#####REVERSE SORT******
+
+arr.sort(function(a,b){
+     return b-a;
+})
+
+console.log(arr);
+
+
+#####when function call shift at the top of the function scope this is called function hosting {not suppoer for function expression, only for plain function}
+-it is only for function, not for varible {only declaration shift in variable hosting, not variable value}
+-it allow only var keyword not let,const {temporal dead zone }
+{
+    myname("Peratik");
+    function myname(name)
+    {
+        console.log(`My name is ${name}`);
+    }
+}
+
+#####varible scope -
+-global accessible everywhere
+-function accessible within function
+-block {var accessible it is not block scope}
+let and const are block scope not accessible outside block
+
+#####Class
+class is a template for object & object is a instance of class
+ex-programming language is  a class and c,c++,java are the objects
+by default all members are public
+# use to create private
+object called dyanamic, becoz we change object properties runtime
+
+class human
+{
+    #name="Pratik";
+    age=20;
+    get()
+    {
+        console.log("For getting data",this.#name);
+    }
+    put()
+    {
+        console.log("For putting data");
+        
+    }
+}
+
+let a=new human();
+// console.log(a.#name);
+console.log(a.age);
+
+a.get();
+a.put();
+
+#####Constructor
+automatically called when class object is created
+class human{
+    age;
+    name;
+    constructor(nm,ag){
+        this.age=ag;
+        this.name=nm;
+        console.log(`${this.name} and age ${this.age}`);
+        
+    }
+}
+let x=new human("Pratik",20);
+
+#####Function with default parameter
+
+function defaultVal(x="pratikkk"){
+    console.log("My name is",x);
+}
+
+defaultVal();
+
+undefined->value
+null->null
+
+#####BUILT IN OBJECTS
+
+console.log(Math.PI);
+console.log(Math.max(645,746,947,5234,487));
+console.log(Math.min(645,746,947,5234,487));
+console.log(Math.round(3.527));
+console.log(Math.floor(3.527));
+console.log(Math.ceil(5.527));
+console.log(Math.abs(-634535));
+console.log(Math.random()*100)
+console.log(Math.sqrt(16))
+console.log(Math.pow(2,3))
+
+let current=new date();
+log(current)
+
+#####Object closing done through using spread opeartor
+let obj1={
+    name:"Pratik",
+    age:20
+}
+let obj2={...obj1};
+
+let obj2.assign({},obj1,obj3); //Assign method of closing
+
+####Garbage collector are mainly used to clear allocted memory
+clear unused memory/ memory no longer used
+run in bg always for efficient utilization memory
+
+####Error is a event when that occurs then it disturbed the normal execution flow of program
+compiletime Error - syntax error
+runtime Error - varible value is not defined
+handle using try-catch block
+
+try - actual error statement
+block - user defined message
+
+try{
+    console.log(x);
+}
+catch(e){
+    console.log("This is error");
+}
+finally{
+    console.log("Always executed");
+}
+
+#Throw used create user defined error
+let code=404;
+if(code==404)
+{
+    throw new Error("This is dangerous error")
+}
+
+#####DOM - document object model
+The process of converting html code into JS object this is called DOM
+BOM-Browser object model
+
+For accessing element:-
+getElementById(ID) - access element with the help of ID
+getElementsByClass(ID) - access element with the help of Class name
+getElementsByTagName(P) - access element with the help of tag name
+ex-p paragraph,h heading
+querySelector - for all type class,ID,tag
+it return only first element,if there are multiple elements of same id,class
+ex- querySelector(#ID,.ClassName,'P')
+querySelectorAll - for accessing all elements of multiple same ID,Class
+
+for updating existing elements:-
+button.innerHtml=<p>Pratik Bavche</p>
+textContent-returns all structure of element
+innerText-returns all text of element
+
+for adding element:-
+let x=document.createElement('h1');
+x.appendChild- add text at the end
+insertAdjacentHTML(position,Content)
+
+for removing element:-
+removeChild()
+
+Style Element:-
+id.style.color="red"; //for single properties
+id.style.cssText="color:red; bg-mfm"; //for multiple properties
+setAttribute('class','f1') - to set attribute  HTML element
+setAttribute('style','color:aqua')
+ClassName(classname)
+
+#####Events & Listeners
+when we click on button then some action is performed this is called event
+
+<event-target>.addEventListener(<event-type>,<action>)
+
+let fpara=document.getElementById('fpara');
+function changeText(){
+    fpara.innerHTML="Pratik bavche patil"
+}
+fpara.addEventListener('click',changeText)
+//fpara.removeEventListener('click',changeText)
+
+##We can change the default action of anchor tag that is clicked with the help of preventDefault() method
+let anc=document.querySelector('#fanc')
+function change(event){
+   event.preventDefault();
+    anc.innerHTML="Action chnaged";
+}
+anc.addEventListener('click',change);
+
+For multiple paragraphs
+
+// let all=document.querySelectorAll('p')
+// for(let i=0;i<all.length;i++){
+//     let one=all[i];
+//     one.addEventListener('click',change)
+// }
+
+function change(event){
+    alert("You have clicked on para "+ event.target.textContent)
+}
+document.addEventListener('click',change)
+
+#####performance.now() :- used to calculate total time required to executed program
+console.log("Total time required:"+(t3-t4));
+
+#Synchronous code :- Synchronous code executed at the same time, does not wait
+#Asynchronous code :- Asynchronous code not executed at the same time
+
+#####Promise:-
+Promise is a Object that handle Asynchronous operation and their returning value
+-used to fetch data from server
+-it is used for parallel execution
+-error handling using catch
+-make code redable & organized
+-timers (setTimeout)
+State:-
+-fulfil :- operation completed
+-reject :- operation failed
+-pending :- neither fulfil nor reject
+
+let promise=new Promise((resolve,reject)=>{
+    console.log("Pratik");
+    // resolve(10000);
+    reject(new Error(Failure));
+})
+
+
+let promise=new Promise((resolve,reject)=>{
+    setTimeout(function hello(){
+        console.log("Hellow!!!");
+    },10000);
+    resolve (1);
+})
+
+let pr=new Promise((resolve,reject)=>{
+    let success=false;
+    if(success)
+    {
+        resolve("Promise fulfilled!!")
+    }
+    else
+    {
+        reject("Promise rejected!!")
+    }
+})
+
+pr.then((val)=>{ //if promise fulfilled
+    console.log(val);
+    
+}).catch((error)=>{ //if promise rejected
+    console.log("Error :- "+error);
+})
+
+#####Async Await Function:-
+it is work with promises in a cleaner,more redable
+-it return promise
+-we can make async to any function
+-await used within Async
+-with the help of Async Awit change behaviour Asynchronous code to Synchronous code
+-await pause the execution of the function until a Promise is resolved or rejected.
+
+async function demo(){
+    let delhiWeather=new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve('12 Deg');
+        },3000)
+        
+    })
+    let puneWeather=new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve('22 Deg');
+        },5000)
+    })
+    // delhiWeather.then(confirm);
+    // puneWeather.then(confirm);
+    console.log("Fetching Weather of Delhi ");
+    let DW=await delhiWeather;
+    console.log("Fetching Weather of Pune ");
+    let PW=await puneWeather;
+    return [DW,PW];
+    
+}
+let data=demo();
+data.then((val)=>{
+    console.log(val);
+})
+
+
+#####Fetch API
+used to fetch resources over the network
+
+async function getdata(){
+    let response=await fetch ('https://jsonplaceholder.typicode.com/posts')
+    let data=await response.json();
+    console.log(data);
+}
+getdata()
+
+
+#####Closure
+-it is combinations of functions
+function outer()
+{
+    let name="Pratik";
+    function inner()
+        {
+            console.log(name);
+        }
+  return  inner;
+}
+let inn=outer();
+inn();
