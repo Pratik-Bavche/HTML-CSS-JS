@@ -3,47 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS DEMO</title>
+    <!-- Internal CSS -->
+     <style>
+         /* ELEMENT SELECTOR */
+        h1{
+             color: orchid !important; 
+            }
+        footer{
+                background-color: rgb(29, 243, 143);
+                font-size: 40px;
+                font-family: cursive;
+                font-weight: 900;
+            }
+        section{
+            /*background-color: beige;
+            background-color: rgb(243, 29, 157,0); Alpha value decide display or not color 
+            background-color: rgb(243, 29, 157,1); */
+            background-color: hsl(0, 100%, 50%);
+        }
+        /* GROUPING */
+        p,div{
+            font-style: italic;
+            line-height: 40px;
+        }
+        div.d1{
+            text-align: center;
+        }
+     </style>
+     <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: black;">
-    <div>
-        <ul id="Images" style="color: white;">
-                <li><h1 id="fname">Pratik</h1></li>
-                <li><h1 id="mname">Bavche</h1></li>
-                <li><h1 id="lname">Patil</h1></li>
-        </ul>
+<body>
+    <!-- Inline CSS -->
+    <h1 style="color: red;">Pratik Bavche Patil</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere commodi optio dolore quod, eligendi nisi dolores sit enim placeat culpa hic dolorem dolor repellendus minus fugit minima impedit nihil? Odit?</p>
+    <footer>I am footer</footer>
+
+    <!-- # IN CSS -->
+    <div id="d2">
+        <h2>Another div using ID</h2>
     </div>
+
+    <!-- . IN CSS -->
+    <div class="d1">
+        <h2>This is div using class</h2>
+    </div>
+
+    <section id="s1">
+        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate explicabo, quaerat voluptatum quo eaque suscipit consequuntur repudiandae ex facere totam. At hic tempore voluptatem perspiciatis voluptas explicabo ad error iste saepe magnam? Dolorum quaerat, iusto nostrum voluptas perspiciatis minima eveniet modi tempore, esse enim provident perferendis et beatae molestiae pariatur!</h5>
+    </section>
+
 </body>
-        <script>
-            // document.getElementById('fname').onclick=function(){
-            //     alert("Firstname is clicked!!")
-            // }
-            // document.getElementById('Images').addEventListener('click',function(e){
-            //       console.log("Another clicked");
-                  
-            // },false)
-            // document.getElementById('fname').addEventListener('click',function(e){
-            //     e.stopPropagation()  
-            //     console.log("Pratik");
-                  
-            // },false)
-            // document.getElementById('lname').addEventListener('click',function(e){
-            //     e.preventDefault();
-            //     e.stopPropagation();
-            //     console.log("Patill");
-            // })
-
-            document.querySelector('#Images').addEventListener('click',function(e){
-                // console.log(e.target.parentNode);
-                console.log(e.target.tagName);
-                if(e.target.tagName=="H1"){
-                    console.log(e.target.id);
-                    let del=e.target.parentNode
-                    // del.parentNode.removeChild(del)
-                    del.remove();
-                    
-                }
-            },false)
-        </script>
-
 </html>
