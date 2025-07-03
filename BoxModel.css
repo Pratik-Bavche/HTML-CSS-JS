@@ -1,0 +1,84 @@
+/* *{
+    padding: 0;
+    margin: 0;
+} */
+h1{
+    background-color: aquamarine;
+    /* border-style: solid;
+    border-width: 2px;
+    color: brown; */
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 300px;
+}
+/* span{
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(240, 21, 189);
+    /* display: block; */
+    /* height: 20px; */
+
+/* } */ */
+.firstPara{
+    background-color: red;
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 300px;
+    /* padding: 50px;
+    margin: 30px; */
+    /* padding: 55px 10px 10px 42px; */
+    /* top-right-bottom-left */
+    padding: 10px 22px;
+    /* {top-bottom}-{left-right} */
+}
+
+/* div{
+    border: 1px solid red;
+    width: 130px;
+    height: 130px;
+    margin: 30px;
+    padding: 30px;
+} */
+
+/* .box{
+    box-sizing: border-box;
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    padding: 20px;
+}
+span{
+    border: 3px solid black;
+
+} */
+
+
+img{
+    margin: 20px;
+}
+div{
+    border: 1px solid black;
+}
+.img2{
+    /* position: relative;
+    top: 100px;
+    left: 100px; */
+    position: absolute;
+    top: 200px;
+}
+.container{
+position: relative;
+height: 3000px;
+background-color: aqua;
+}
+
+.img4{
+    position: fixed;
+}
+.img3{
+    position: sticky;
+    top: 0;
+}
+.con{
+    height: 1500px;
+}
